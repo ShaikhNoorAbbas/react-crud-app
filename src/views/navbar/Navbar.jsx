@@ -8,7 +8,9 @@ export default function Navbar() {
             <nav className="navContainer">
                 {/* Logo */}
                 <div className="logo">
-                    <MdMenuBook size={'4vmax'} color="blueviolet" />
+                    <NavLink to={'/'}>
+                        <MdMenuBook size={'4vmax'} color="blueviolet" style={{ cursor: 'pointer' }} />
+                    </NavLink>
                 </div>
                 {/* navlinks */}
                 <ul className="navlinks">
