@@ -7,7 +7,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './views/layout/Layout.jsx';
 import Home from "./views/home/Home.jsx";
 import Update from "./views/update/Update.jsx";
-import Add from './views/add/Add.jsx';
+import Add from "./views/add/Add.jsx";
+
+
+
 const route = createBrowserRouter([
   {
     path: '/',

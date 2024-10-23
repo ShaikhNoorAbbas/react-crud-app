@@ -1,4 +1,4 @@
-import { Outlet } from "react-router";
+import { Outlet } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import "./layout.css";
 // Layout function Startes from here

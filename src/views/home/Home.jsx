@@ -16,10 +16,10 @@ export default function Home() {
         <>
             <div>
                 <h1 style={{ textAlign: 'center' }}>Posts Data</h1>
-                <ul className="d-flex justify-content-around">
+                <ul className="d-flex justify-content-evenly flex-wrap row-gap-4">
                     {
                         data && data.map((element) => (
-                            <div className="card">
+                            <div className="card text-center" style={{ minWidth: '200px', boxShadow: "1px 1px 0.8rem black" }}>
                                 <div className="card-body">
                                     <li className="card-title">Name: {element.title}</li>
                                 </div>

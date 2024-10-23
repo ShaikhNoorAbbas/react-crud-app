@@ -1,17 +1,18 @@
 import { useState } from "react"
 import { api } from "../../api/api";
-
+import { useNavigate } from "react-router-dom";
 export default function Add() {
+    const navigate = useNavigate();
     const [data, setData] = useState({
         title: ""
     })
-    console.log(route);
     function handleSubmit(event) {
         event.preventDefault();
         createdData();
         setData({
             title: ""
         });
+        navigate('/')
     }
     async function createdData() {
         const response = await api.post('/posts', data);
