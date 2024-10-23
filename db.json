@@ -1,36 +1,19 @@
 {
   "posts": [
     {
-      "id": "1",
-      "title": "This is a Title One"
+      "id": "14e6",
+      "title": "48 laws of power by Robert Green",
+      "author": "Robert Green"
     },
     {
-      "id": "2",
-      "title": "Title Two"
+      "id": "12b4",
+      "title": "Obstacle the way",
+      "author": "Ryn Holiday"
     },
     {
-      "id": "3",
-      "title": "This is a Title Three"
-    },
-    {
-      "id": "4",
-      "title": "This is a Title Four"
-    },
-    {
-      "id": "a85f",
-      "title": "Hello"
-    },
-    {
-      "id": "8f55",
-      "title": "Sample Text"
-    },
-    {
-      "id": "157d",
-      "title": "Sample New"
-    },
-    {
-      "id": "1d83",
-      "title": "Think and Grow Rich"
+      "id": "a885",
+      "title": "Hello World",
+      "author": "Program"
     }
   ]
 }

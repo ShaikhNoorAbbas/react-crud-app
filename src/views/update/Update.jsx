@@ -8,10 +8,12 @@ export default function Update() {
     const navigate = useNavigate();
 
     const [value, setValue] = useState({
-        title: ''
+        title: '',
+        author: ''
     });
     const [allData, setAllData] = useState(null);
     const [stateTitle, setTitle] = useState('');
+    const [stateAuthor, setAuthor] = useState('');
 
     // Fetching data and implementing 
     useEffect(() => {
@@ -24,6 +26,7 @@ export default function Update() {
             // console.log(findValue);
             setValue(findValue);
             setTitle(findValue.title);
+            setAuthor(findValue.author);
         }
         fetchData();
     }, [])
@@ -35,7 +38,8 @@ export default function Update() {
             console.log(value);
             let newValue = {
                 ...value,
-                title: stateTitle
+                title: stateTitle,
+                author: stateAuthor
             }
             console.log(newValue)
             const response = await api.put(`/posts/${id}`, newValue);
@@ -54,9 +58,18 @@ export default function Update() {
                 </ol>
             </nav>
             <form>
+                {/* title label and input */}
                 <div>
                     <label htmlFor="title" className="form-label">Title</label>
                     <input type="text" name="title" id="title" className="form-control" value={stateTitle} onChange={(e) => setTitle(e.target.value)} />
+                </div>
+                {/* Author label and input */}
+                <div>
+                    <label htmlFor="author" className="form-label">Author</label>
+                    <input type="text" name="author" id="author" className="form-control" onChange={(e) => setAuthor(e.target.value)} value={stateAuthor} />
+                </div>
+                {/* update button */}
+                <div>
                     <button type="button" onClick={handleUpdate} className="btn btn-warning mt-3">Update</button>
                 </div>
             </form>
