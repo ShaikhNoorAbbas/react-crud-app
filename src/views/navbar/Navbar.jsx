@@ -1,12 +1,14 @@
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
+import { MdMenuBook } from "react-icons/md";
+// Navbar Function
 export default function Navbar() {
     return (
         <>
             <nav className="navContainer">
                 {/* Logo */}
                 <div className="logo">
-                    <h2>LOGO</h2>
+                    <MdMenuBook size={'4vmax'} color="blueviolet" />
                 </div>
                 {/* navlinks */}
                 <ul className="navlinks">
