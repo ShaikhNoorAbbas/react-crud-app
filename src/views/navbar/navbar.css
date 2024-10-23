@@ -1,25 +1,23 @@
 .navContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  margin-top: 10px;
 }
 
-
 .navlinks a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .navlinks li {
-    list-style-type: none;
-    cursor: pointer;
+  list-style-type: none;
+  cursor: pointer;
 }
 
-
 .navlinks {
-    display: flex;
-    gap: 50px;
-    font-size: 1.3rem;
+  display: flex;
+  gap: 50px;
+  font-size: 1.3rem;
 }

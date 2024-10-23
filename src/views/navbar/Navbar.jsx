@@ -10,12 +10,12 @@ export default function Navbar() {
                 </div>
                 {/* navlinks */}
                 <ul className="navlinks">
-                    <li className="linkContainer">
+                    <li>
                         <NavLink to={'/'}>
                             Home
                         </NavLink>
                     </li>
-                    <li className="linkContainer">
+                    <li>
                         <NavLink to={'/add'}>
                             Add
                         </NavLink>
