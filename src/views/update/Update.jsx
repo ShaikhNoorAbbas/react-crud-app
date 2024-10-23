@@ -61,12 +61,12 @@ export default function Update() {
                 {/* title label and input */}
                 <div>
                     <label htmlFor="title" className="form-label">Title</label>
-                    <input type="text" name="title" id="title" className="form-control" value={stateTitle} onChange={(e) => setTitle(e.target.value)} />
+                    <input type="text" name="title" id="title" className="form-control" value={stateTitle} onChange={(e) => setTitle(e.target.value)} placeholder="Please Update Title" />
                 </div>
                 {/* Author label and input */}
                 <div>
                     <label htmlFor="author" className="form-label">Author</label>
-                    <input type="text" name="author" id="author" className="form-control" onChange={(e) => setAuthor(e.target.value)} value={stateAuthor} />
+                    <input type="text" name="author" id="author" className="form-control" onChange={(e) => setAuthor(e.target.value)} value={stateAuthor} placeholder="Please Update Author" />
                 </div>
                 {/* update button */}
                 <div>
