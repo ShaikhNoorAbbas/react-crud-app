@@ -17,7 +17,7 @@ export default function Update() {
 
     // Fetching data and implementing 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchData = async () => { 
             const response = await api.get('/posts');
             const data = response.data;
             console.log(data);

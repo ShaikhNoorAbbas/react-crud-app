@@ -35,24 +35,42 @@ export default function Home() {
     }
     return (
         <>
+
             <div>
                 <h1 style={{ textAlign: 'center' }}>Book Management System</h1>
-                <ul className="d-flex justify-content-evenly flex-wrap row-gap-4 gap-4">
-                    {
-                        data && data.map((element, index) => (
-                            <div key={index} className="card text-center" style={{ boxShadow: "1px 1px 0.8rem black", minWidth: '300px', maxWidth: '300px' }}>
-                                <div className="card-body">
-                                    <li className="card-title">Name: {element.title}</li>
-                                    <li className="card-title">Author: {element.author}</li>
-                                    <div className="d-flex justify-content-evenly">
-                                        <FaPencil onClick={() => handleAction({ type: 'update', id: element.id })} color="green" style={{ cursor: 'pointer' }} />
-                                        < MdDelete onClick={() => handleAction({ type: 'delete', id: element.id })} color="red" style={{ cursor: "pointer" }} />
-                                    </div>
-                                </div>
-                            </div>
-                        ))
-                    }
-                </ul>
+                <table className="table table-striped table-hover text-center">
+                    <thead className="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Book Title</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            data && data.map((element, index) => (
+                                <tr key={index}>
+                                    <th scope="row">{index + 1}</th>
+                                    <td>{element.title}</td>
+                                    <td>{element.author}</td>
+                                    <td>
+                                        <FaPencil
+                                            onClick={() => handleAction({ type: 'update', id: element.id })}
+                                            color="green"
+                                            style={{ cursor: 'pointer', marginRight: '10px' }}
+                                        />
+                                        <MdDelete
+                                            onClick={() => handleAction({ type: 'delete', id: element.id })}
+                                            color="red"
+                                            style={{ cursor: 'pointer' }}
+                                        />
+                                    </td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
+                </table>
             </div>
         </>
     )
