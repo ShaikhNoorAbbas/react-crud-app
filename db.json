@@ -1,9 +1,19 @@
 {
   "posts": [
     {
-      "id": "f809",
-      "title": "5 am club",
-      "author": "Rohit Sharma"
+      "id": "204e",
+      "title": "48 laws of power",
+      "author": "Robert Green"
+    },
+    {
+      "id": "aabd",
+      "title": "No Excuses",
+      "author": "Brain Tracy"
+    },
+    {
+      "id": "3c98",
+      "title": "Think and Grow Rich",
+      "author": "Nappollian Hills"
     }
   ]
 }

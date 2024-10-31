@@ -10,7 +10,6 @@ export default function Home() {
     const [data, setData] = useState(null);
     const navigate = useNavigate();
     useEffect(() => {
-
         fetchData();
     }, [])
 
@@ -35,24 +34,33 @@ export default function Home() {
     }
     return (
         <>
+            <h1 style={{ textAlign: 'center', marginTop: "10px" }}>Book Management Application</h1>
             <div>
-                <h1 style={{ textAlign: 'center' }}>Book Management System</h1>
-                <ul className="d-flex justify-content-evenly flex-wrap row-gap-4 gap-4">
-                    {
-                        data && data.map((element, index) => (
-                            <div key={index} className="card text-center" style={{ boxShadow: "1px 1px 0.8rem black", minWidth: '300px', maxWidth: '300px' }}>
-                                <div className="card-body">
-                                    <li className="card-title">Name: {element.title}</li>
-                                    <li className="card-title">Author: {element.author}</li>
-                                    <div className="d-flex justify-content-evenly">
-                                        <FaPencil onClick={() => handleAction({ type: 'update', id: element.id })} color="green" style={{ cursor: 'pointer' }} />
+                <table class="table table-striped mt-4">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            data && data.map((element, index) => (
+                                <tr key={index}>
+                                    <td scope="row">{index + 1}</td>
+                                    <td scope="col">{element.title}</td>
+                                    <td scope="col">{element.author}</td>
+                                    <td scope="col">
+                                        <FaPencil onClick={() => handleAction({ type: 'update', id: element.id })} color="green" style={{ cursor: 'pointer', marginRight: '10px' }} />
                                         < MdDelete onClick={() => handleAction({ type: 'delete', id: element.id })} color="red" style={{ cursor: "pointer" }} />
-                                    </div>
-                                </div>
-                            </div>
-                        ))
-                    }
-                </ul>
+                                    </td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
+                </table>
             </div>
         </>
     )
